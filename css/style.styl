@@ -1,0 +1,206 @@
+colors = {
+  yellow : #fbc820,
+  orange : #f68939,
+  purple : #f15f7d,
+  pink : #d64f9d,
+  blue : #3757a7,
+  turquoise : #5dc3e9,
+  green : #66be5e
+}
+
+body
+  font-family 'Lato', sans-serif
+  background white
+  font-size 120%
+  line-height 150%
+  font-weight 300
+
+.container.narrow
+  max-width 970px !important
+
+.nav-pills
+  text-align center
+  > li
+    display inline-block
+    float none
+  img
+    width 18px
+    vertical-align middle
+    margin-top -3px
+
+.navbar
+  z-index 1000
+  position fixed
+  left 0
+  right 0
+  background transparent
+  border 0
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+0,0+100;White+to+Transparent */
+  background: -moz-linear-gradient(top, rgba(255,255,255,1) 45%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(255,255,255,1) 45%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(255,255,255,1) 45%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+
+.navbar .navbar-brand
+  height 120px
+  float none
+  padding 0
+
+.navbar .search-field
+  height 50px
+  margin 15px 0 0 10px
+
+.navbar .navbar-nav a
+  line-height 50px
+  font-weight 400
+
+.navbar .navbar-nav
+    li.active
+    li.active a, li.active a:hover
+      background transparent
+.navbar-spacer
+  height 100px
+
+nav input.search-field
+  background-image url(../img/magnifying-glass.svg)
+  background-position 90% center
+  background-repeat no-repeat
+  background-size 20px
+  width 30px
+  border-color transparent
+  transition .5s
+  box-shadow none
+  &::-webkit-input-placeholder /* WebKit, Blink, Edge */
+    color transparent
+  &:-moz-placeholder /* Mozilla Firefox 4 to 18 */
+     color transparent
+  &::-moz-placeholder /* Mozilla Firefox 19+ */
+     color transparent
+  &:-ms-input-placeholder /* Internet Explorer 10-11 */
+     color transparent
+  cursor pointer
+  color transparent
+  &:focus
+    cursor auto
+    width 250px
+    border-color #66afe9
+    color #333
+    &::-webkit-input-placeholder /* WebKit, Blink, Edge */
+      color #333
+    &:-moz-placeholder /* Mozilla Firefox 4 to 18 */
+       color #333
+    &::-moz-placeholder /* Mozilla Firefox 19+ */
+       color #333
+    &:-ms-input-placeholder /* Internet Explorer 10-11 */
+       color #333
+// .header-stripes
+//   width 100%
+//   position absolute
+//   top -150px
+//   overflow hidden
+//   white-space nowrap
+//
+// .header-stripes div
+//   left -10%
+//   display inline-block
+//   height 600px
+//   width 17%
+//   position relative
+//   &:nth-child(1)
+//     transform rotate(45deg) translateY(-50%)
+//     background colors["yellow"]
+//   &:nth-child(2)
+//     transform rotate(45deg) translateY(-65%)
+//     background colors["orange"]
+//   &:nth-child(3)
+//     transform rotate(45deg) translateY(-30%)
+//     background colors["purple"]
+//   &:nth-child(4)
+//     transform rotate(45deg) translateY(-40%)
+//     background colors["pink"]
+//   &:nth-child(5)
+//     transform rotate(45deg) translateY(0%)
+//     background colors["blue"]
+//   &:nth-child(6)
+//     transform rotate(45deg) translateY(-20%)
+//     background colors["turquoise"]
+//   &:nth-child(7)
+//     transform rotate(45deg) translateY(-20%)
+//     background colors["green"]
+//
+
+h1, h2, h3
+  font-weight 300
+  position relative
+
+header.main
+  width 100%
+  height 500px
+  background url(../img/header-main.png)
+  background-size cover
+  background-position top center
+  background-repeat no-repeat
+
+footer
+  display block
+  height 400px
+  width 100%
+  background url(../img/footer.png)
+  background-size cover
+  background-position bottom center
+  background-repeat no-repeat
+  text-align center
+
+.footer-logos img
+  max-height 80px
+  max-width 210px
+  line-height 130px
+  margin 230px 30px 30px 0
+
+article.sub-page
+  font-size 120%
+  line-height 160%
+  h2
+    padding-bottom 1em
+
+section.citation
+  color #999
+  font-size 80%
+  h6
+    font-size 1em
+    font-weight 300
+    text-transform uppercase
+  table
+    margin 0 auto
+  table td:first-child
+    padding-right 2em
+
+article.intro-text
+  font-size 120%
+  line-height 150%
+  text-align center
+  // text-align justify
+  text-align-last center
+  h1 span
+    display block
+    font-size .6em
+    margin-top .5em
+
+article.preview
+  padding 2em 1em
+  h3
+    line-height 140%
+    margin-top 0
+  h3:before
+    content " "
+    position absolute
+    left -1.2em
+    display block
+    height 100%
+    width .5em
+    background colors["green"]
+  h5
+    letter-spacing .1em
+    font-size .8em
+    font-weight 600
+    color colors["green"]
