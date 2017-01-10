@@ -14,10 +14,10 @@ a
 body
   font-family 'Lato', sans-serif
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f5f5f5+0,ffffff+100 */
-  background #f5f5f5 /* Old browsers */
-  background -moz-linear-gradient(top,  #f5f5f5 0%, #ffffff 100%) /* FF3.6-15 */
-  background -webkit-linear-gradient(top,  #f5f5f5 0%,#ffffff 100%) /* Chrome10-25,Safari5.1-6 */
-  background linear-gradient(to bottom,  #f5f5f5 0%,#ffffff 100%) /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background rgba(255,255,255,.9) /* Old browsers */
+  // background -moz-linear-gradient(top,  #f5f5f5 0%, #ffffff 100%) /* FF3.6-15 */
+  // background -webkit-linear-gradient(top,  #f5f5f5 0%,#ffffff 100%) /* Chrome10-25,Safari5.1-6 */
+  // background linear-gradient(to bottom,  #f5f5f5 0%,#ffffff 100%) /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   font-size 130%
   line-height 150%
   font-weight 300
@@ -26,8 +26,17 @@ body
   max-width 970px !important
 
 .nav-pills
+  background-image url(../img/dioe-logo-bg.png)
+  background-repeat no-repeat
+  background-position -100% center
+  background-size 15%
+  background-color white
+  z-index 999
+  position absolute
+  left 0
+  right 0
   font-weight 400
-  margin-top 2.5em
+  padding 1.25em 0
   text-align center
   > li
     display inline-block
@@ -69,6 +78,18 @@ body
       background transparent
 .navbar-spacer
   height 100px
+
+.dropdown-menu
+  border 0
+  font-size 20px
+  background #f5f5f5
+  box-shadow none
+  margin-top 1.25em
+
+.dropdown-menu > li > a
+  line-height 2em
+  padding 3px 40px
+  color #34a2cb
 
 nav input.search-field
   background-image url(../img/magnifying-glass.svg)
@@ -200,6 +221,7 @@ section.citation
     padding-right 2em
 
 article.intro-text
+  margin-top 4.5em
   font-size 120%
   line-height 150%
   text-align justify
@@ -214,7 +236,6 @@ article.preview
   h3
     line-height 140%
     margin-top 0
-    font-weight 400
   h3:before
     content " "
     position absolute
@@ -228,3 +249,6 @@ article.preview
     font-size .8em
     font-weight 600
     color colors["green"]
+
+.panel.citation .panel-body
+  font-size .7em
