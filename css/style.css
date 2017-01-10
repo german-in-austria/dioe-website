@@ -1,7 +1,14 @@
+a {
+  color: #34a2cb;
+}
 body {
   font-family: 'Lato', sans-serif;
-  background: #fff;
-  font-size: 120%;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f5f5f5+0,ffffff+100 */
+  background: #f5f5f5 /* Old browsers */;
+  background: -moz-linear-gradient(top, #f5f5f5 0%, #fff 100%) /* FF3.6-15 */;
+  background: -webkit-linear-gradient(top, #f5f5f5 0%, #fff 100%) /* Chrome10-25,Safari5.1-6 */;
+  background: linear-gradient(to bottom, #f5f5f5 0%, #fff 100%) /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */;
+  font-size: 130%;
   line-height: 150%;
   font-weight: 300;
 }
@@ -9,6 +16,8 @@ body {
   max-width: 970px !important;
 }
 .nav-pills {
+  font-weight: 400;
+  margin-top: 2.5em;
   text-align: center;
 }
 .nav-pills > li {
@@ -60,6 +69,7 @@ nav input.search-field {
   background-size: 20px;
   width: 30px;
   border-color: transparent;
+  background-color: transparent;
   transition: 0.5s;
   box-shadow: none;
   cursor: pointer;
@@ -81,6 +91,7 @@ nav input.search-field:focus {
   cursor: auto;
   width: 250px;
   border-color: #66afe9;
+  background-color: #fff;
   color: #333;
 }
 nav input.search-field:focus::-webkit-input-placeholder {
@@ -101,13 +112,28 @@ h3 {
   font-weight: 300;
   position: relative;
 }
+.bold {
+  font-weight: 400;
+}
 header.main {
   width: 100%;
   height: 500px;
-  background: url("../img/header-main.png");
+  background: url("../img/header.png");
+  text-align: center;
+  color: #fff;
   background-size: cover;
-  background-position: top center;
+  background-position: center center;
   background-repeat: no-repeat;
+}
+header.main .logo {
+  width: 120px;
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+header.main h1 {
+  font-size: 2.5em;
+  letter-spacing: -0.04em;
+  margin: 0;
 }
 footer {
   display: block;
@@ -123,7 +149,7 @@ footer {
   max-height: 80px;
   max-width: 210px;
   line-height: 130px;
-  margin: 230px 30px 30px 0;
+  margin: 260px 30px 30px 0;
 }
 article.sub-page {
   font-size: 120%;
@@ -150,7 +176,7 @@ section.citation table td:first-child {
 article.intro-text {
   font-size: 120%;
   line-height: 150%;
-  text-align: center;
+  text-align: justify;
   text-align-last: center;
 }
 article.intro-text h1 span {
@@ -164,6 +190,7 @@ article.preview {
 article.preview h3 {
   line-height: 140%;
   margin-top: 0;
+  font-weight: 400;
 }
 article.preview h3:before {
   content: " ";
