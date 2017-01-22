@@ -25,38 +25,66 @@ html.no-js(lang='de-DE')
         |  to improve your experience.
     // Add your site or application content here
     header.main(
-        data-0="background-position-y:50%;"
-        data-500="background-position-y:100%;"
+        data-0="background-position-y:100%;"
+        data-390="background-position-y:150%;"
       )
-      img.logo(src='img/dioe-logo-white.png')
-      h1.bold SFB Deutsch in Österreich (DiÖ)
-      h1 Variation - Kontakt - Perzeption
+      img.logo(
+        src='img/dioe-logo-gray.png'
+        data-0="transform:translateY(0px); opacity: 1"
+        data-390="transform:translateY(150px); opacity:.7"
+      )
     nav.nav.nav-pills(
-        data-0="top: !auto; position:absolute; background-position: -100% center;"
-        data-top="top: !0; position:fixed; background-position: -5% center;"
+        data-0="top: !auto; position:absolute; background-position: -50px center;"
+        data-top="top: !0; position:fixed; background-position: 60px center;"
       )
-      li(role='presentation')
-        a(href='#') Startseite
       li.dropdown(role='presentation')
         a.dropdown-toggle(
           href='#'
           data-toggle='dropdown'
-        ) Projekt
+        ) Über DiÖ
+          span.caret
         ul.dropdown-menu
           li
-            a(href="#") Unterpunkt 1
+            a(href="#") Leitfaden
+            a(href="#") Mitarbeiter
+      li.dropdown(role='presentation')
+        a.dropdown-toggle(
+          href='#'
+          data-toggle='dropdown'
+        ) Projekte
+          span.caret
+        ul.dropdown-menu
           li
-            a(href="#") Unterpunkt 2
-      li(role='presentation')
+            a(href="#") Task-Cluster A: Koordination
+          li
+            a(href="#") Task-Cluster B: Variation
+          li
+            a(href="#") Task-Cluster C: Kontakt
+          li
+            a(href="#") Task-Cluster D: Perzeption
+          li
+            a(href="#") Task-Cluster E: Forschungsplattform
+      li.active(role='presentation')
         a(href='#') News
       li(role='presentation')
         a(href='#') Mitmachen
       li(role='presentation')
         a(href='#') FAQs
+      li.dropdown(role='presentation')
+        a.dropdown-toggle(
+          href='#'
+          data-toggle='dropdown'
+        ) Aktivitäten
+          span.caret
+        ul.dropdown-menu
+          li
+            a(href="#") Publikationen
+          li
+            a(href="#") Vorträge
+          li
+            a(href="#") Seminare
       li(role='presentation')
-        a(href='#') Publikationen
-      li(role='presentation')
-        a(href='#') Aktivitäten
+        a(href='#') Vernetzung
       li(role='presentation')
         a(href='#') Presse
       li
@@ -64,6 +92,8 @@ html.no-js(lang='de-DE')
     .container.narrow
       article.intro-text.text-center
         br
+        p
+          a.bold(href='/ueber-dioe') Über das Projekt ”Deutsch in Österreich”
         p
           | Das Projekt „Deutsch in Österreich. Variation – Kontakt – Perzeption“ behandelt ein gesellschaftlich relevantes Thema
           | und beschäftigt sich mit der Vielfältigkeit und dem Wandel der deutschen Sprache in Österreich. Es behandelt den Gebrauch
@@ -74,45 +104,56 @@ html.no-js(lang='de-DE')
           | machen. Das beinhaltet alle Personen, die sich für das Gesamtspektrum der Variation und Varietäten des Deutschen in
           | Österreich interessieren.
         br
-        p
-          a.bold(href='/ueber-dioe') Über das Projekt ”Deutsch in Österreich”
+          
     .container.narrow
       .news-main
         br
         br
-        h1.text-center Neues
-        article.preview
+        p.bold Neues
+        article.preview.blog-post
+          h5 Cluster B – Blog Post
+          h1.title Einsatz der Österreichischen Jugendsprachen in Wiener Tageszeitungen
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          h2 Lorem Ipsum Dolor Sit Amet
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          h2 Lorem Ipsum Dolor Sit Amet
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          a.btn.btn-default(href='#') 3 Kommentare
+          
+        article.preview.vortrag
           h5 Cluster B – Vortrag
-          h3 Einsatz der Österreichischen Jugendsprachen in Wiener Tageszeitungen
+          h1.title Breuer, L. M. & Bülow, L. | Experimental Approaches in the Realm of Language Variation – New Perspectives on Data Acquisition of Linguistic Variation and its Perception
+          p Panel bei IClave9 | Malaga, Spanien | 6.-9. Juni 2017 | 
+            a(href="#") Abstract (PDF)
+          a.btn.btn-default(href='#') 1 Kommentar
+        article.preview.vortrag
+          h5 Cluster B – Vortrag
+          h1.title Workshop: Sprachwissenschaftliche Dissertationsprojekte der Wiener Germanistik 2017
+          p 07.-08.04.2017
+          p Organisation: Mag. Michael Riccabona, Mag. Martina Schmidinger, Mag.
+          p Wolfgang Koppensteiner, Univ.-Prof. Dr. Alexandra N. Lenz
+          p Der Workshop soll den Doktorandinnen und Doktoranden der germanistischen Linguistik (und angrenzender Fachbereiche) in Wien die Möglichkeit eröffnen, ihre individuellen Dissertationsprojekte zu präsentieren und ausführlich miteinander zu diskutieren. Außerdem soll das Treffen dem Ausbau des Netzwerks der sprachwissenschaftlichen DoktorandInnen des germanistischen Instituts (linggerm) dienen.
+          p Ort: Österreichische Akademie der Wissenschaften, Wohllebengasse 14, 1040 Wien, Seminarraum 1
+          a.btn.btn-default(href='#') Beitrag anzeigen
+        
+        article.preview.blog-post
+          h5 Cluster B – Blog Post
+          h1.title Einsatz der Österreichischen Jugendsprachen in Wiener Tageszeitungen
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            | tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            | quis nostrud exercitation ...
+            
+        article.preview.blog-post
+          h5 Cluster B – Blog Post
+          h1.title Einsatz der Österreichischen Jugendsprachen in Wiener Tageszeitungen
           p
             | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
             | tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
             | quis nostrud exercitation ...
           a.btn.btn-default(href='#') Beitrag anzeigen
-        article.preview
-          h5 Cluster B – Vortrag
-          h3 Einsatz der Österreichischen Jugendsprachen in Wiener Tageszeitungen
-          p
-            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            | tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            | quis nostrud exercitation ...
-          a.btn.btn-default(href='#') Beitrag anzeigen
-        article.preview
-          h5 Cluster B – Vortrag
-          h3 Einsatz der Österreichischen Jugendsprachen in Wiener Tageszeitungen
-          p
-            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            | tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            | quis nostrud exercitation ...
-          a.btn.btn-default(href='#') Beitrag anzeigen
-        article.preview
-          h5 Cluster B – Vortrag
-          h3 Einsatz der Österreichischen Jugendsprachen in Wiener Tageszeitungen
-          p
-            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            | tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            | quis nostrud exercitation ...
-          a.btn.btn-default(href='#') Beitrag anzeigen
+          
       .newsletter-registration.clearfix
         br
         br
