@@ -25,7 +25,11 @@
       |  to improve your experience.
     -->
     <!-- Add your site or application content here-->
-    <header data-0="background-position-y:100%;" data-390="background-position-y:150%;" class="main"><img src="img/dioe-logo-gray.png" data-0="transform:translateY(0px); opacity: 1" data-390="transform:translateY(150px); opacity:.7" class="logo"></header>
+    <header class="main">
+      <img class="hero mountains active" data-0="transform: translateY(40%)" data-390="transform: translateY(70%)" src="img/mountains.png" />
+      <img class="hero city" data-0="transform: translateY(40%)" data-390="transform: translateY(70%)" src="img/city.png" />
+      <img class="logo" src="img/dioe-logo-gray.png" data-0="transform:translateY(0%); opacity: 1" data-390="transform:translateY(150%); opacity:.7">
+    </header>
     <nav data-0="top: !auto; position:absolute; background-position: -50px center;" data-top="top: !0; position:fixed; background-position: 60px center;" class="nav nav-pills">
       <li role="presentation" class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Über DiÖ<span class="caret"></span></a>
         <ul class="dropdown-menu">
@@ -53,12 +57,12 @@
       </li>
       <li role="presentation"><a href="#">Vernetzung</a></li>
       <li role="presentation"><a href="#">Presse</a></li>
-      <li>
+      <!-- <li>
         <input type="text" placeholder="suchen…" class="search-field form-control">
-      </li>
+      </li> -->
     </nav>
     <div class="container narrow">
-      <article class="intro-text text-center"><br>
+      <article class="intro-text"><br>
         <h1 class="text-center">
           SFB Deutsch in Österreich
           <span>Variaton – Kontakt – Perzeption</span>
@@ -81,7 +85,7 @@
     <div class="container narrow">
       <div class="news-main"><br><br>
         <article class="preview blog-post">
-          <div class="badge date pull-right">25. Jänner 2017</div>
+          <div class="publishing-date pull-right">25. Jänner 2017</div>
           <h5>Cluster B – Blog Post</h5>
           <h1 class="title">Einsatz der Österreichischen Jugendsprachen in Wiener Tageszeitungen</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -92,11 +96,13 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><a href="#" class="btn btn-default">3 Kommentare</a>
         </article>
         <article class="preview vortrag">
+          <div class="publishing-date pull-right">25. Jänner 2017</div>
           <h5>Cluster B – Vortrag</h5>
           <h1 class="title">Breuer, L. M. & Bülow, L. | Experimental Approaches in the Realm of Language Variation – New Perspectives on Data Acquisition of Linguistic Variation and its Perception</h1>
           <p>Panel bei IClave9 | Malaga, Spanien | 6.-9. Juni 2017 | <a href="#">Abstract (PDF)</a></p><a href="#" class="btn btn-default">1 Kommentar</a>
         </article>
         <article class="preview vortrag">
+          <div class="publishing-date pull-right">25. Jänner 2017</div>
           <h5>Cluster B – Vortrag</h5>
           <h1 class="title">Workshop: Sprachwissenschaftliche Dissertationsprojekte der Wiener Germanistik 2017</h1>
           <p>07.-08.04.2017</p>
@@ -106,6 +112,7 @@
           <p>Ort: Österreichische Akademie der Wissenschaften, Wohllebengasse 14, 1040 Wien, Seminarraum 1</p><a href="#" class="btn btn-default">Beitrag anzeigen</a>
         </article>
         <article class="preview blog-post">
+          <div class="publishing-date pull-right">25. Jänner 2017</div>
           <h5>Cluster B – Blog Post</h5>
           <h1 class="title">Einsatz der Österreichischen Jugendsprachen in Wiener Tageszeitungen</h1>
           <p>
@@ -115,13 +122,15 @@
           </p>
         </article>
         <article class="preview blog-post">
+          <div class="publishing-date pull-right">25. Jänner 2017</div>
           <h5>Cluster B – Blog Post</h5>
           <h1 class="title">Einsatz der Österreichischen Jugendsprachen in Wiener Tageszeitungen</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ...
-          </p><a href="#" class="btn btn-default">Beitrag anzeigen</a>
+            <img src="http://lorempixel.com/350/350/">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <a href="#" class="btn btn-default">Beitrag anzeigen</a>
         </article>
       </div>
       <div class="newsletter-registration clearfix"><br><br>
@@ -157,6 +166,9 @@
     <script src="js/main.js"></script>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.-->
     <script>
+      setInterval(function() {
+        $('.hero').toggleClass('active')
+      }, 8000)
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
       function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
       e=o.createElement(i);r=o.getElementsByTagName(i)[0];

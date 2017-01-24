@@ -35,7 +35,9 @@ body {
 .nav-pills > li > a {
   padding: 1.25em 0.5em;
 }
-.nav-pills > li > a:hover {
+.nav-pills > li > a:hover,
+.nav-pills > li > a.active:hover {
+  color: #333;
   background: transparent;
 }
 .nav-pills img {
@@ -91,10 +93,16 @@ body {
   font-size: 20px;
   background: #f5f5f5;
   box-shadow: none;
-  margin-top: 1.25em;
+  pointer-events: none;
+  display: block;
+  opacity: 0;
+  transition: 0.4s;
+  transform: translateY(-10px);
 }
 .dropdown:hover .dropdown-menu {
-  display: block;
+  transform: translateY(0px);
+  pointer-events: auto;
+  opacity: 1;
   margin-top: 0;
 }
 .dropdown-menu > li > a {
@@ -158,28 +166,31 @@ h3 {
 header.main {
   width: 100%;
   height: 390px;
-  text-align: center;
-  color: #666;
-  background-image: url("../img/footer.png");
-  background-size: 70%;
-  background-position-x: center;
-  background-repeat: no-repeat;
+  overflow: hidden;
 }
-header.main .logo {
+header.main img.logo {
+  transform: translateZ(1px);
   width: 80px;
-  margin-top: 70px;
-  margin-bottom: 70px;
+  margin: 70px auto;
+  display: block;
 }
-header.main h1 {
-  font-size: 2em;
-  letter-spacing: -0.04em;
-  margin: 0;
+header.main img.hero {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 70%;
+  margin: 0 auto;
+  transition: opacity 4s;
+}
+header.main img.hero.active {
+  opacity: 1;
 }
 footer {
   display: block;
   height: 400px;
   width: 100%;
-  background: url("../img/footer.png");
+  background: url("../img/mountains.png");
   background-size: cover;
   background-position: bottom center;
   background-repeat: no-repeat;
@@ -213,9 +224,10 @@ section.citation table {
 section.citation table td:first-child {
   padding-right: 2em;
 }
-article .badge.date {
-  margin-top: 1em;
-  margin-right: 1em;
+article .publishing-date {
+  font-size: 0.8em;
+  font-weight: 400;
+  margin-top: 0.3em;
 }
 article.intro-text {
   margin-top: 5em;
@@ -238,6 +250,12 @@ article.preview h5 {
   font-size: 0.8em;
   font-weight: 600;
 }
+.news-main article img {
+  float: left;
+  max-width: 40%;
+  margin-right: 2em;
+  border-radius: 5px;
+}
 article.vortrag h5 {
   color: #3757a7;
 }
@@ -250,8 +268,8 @@ article.vortrag h1.title:before {
   width: 0.25em;
   background: #3757a7;
 }
-article.vortrag .badge.date {
-  background: #3757a7;
+article.vortrag .publishing-date {
+  color: #3757a7;
 }
 article.blog-post h5 {
   color: #66be5e;
@@ -265,8 +283,8 @@ article.blog-post h1.title:before {
   width: 0.25em;
   background: #66be5e;
 }
-article.blog-post .badge.date {
-  background: #66be5e;
+article.blog-post .publishing-date {
+  color: #66be5e;
 }
 .panel.citation .panel-body {
   font-size: 0.7em;
