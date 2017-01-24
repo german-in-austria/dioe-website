@@ -213,6 +213,10 @@ section.citation table {
 section.citation table td:first-child {
   padding-right: 2em;
 }
+article .badge.date {
+  margin-top: 1em;
+  margin-right: 1em;
+}
 article.intro-text {
   margin-top: 5em;
   text-align: justify;
@@ -246,6 +250,9 @@ article.vortrag h1.title:before {
   width: 0.25em;
   background: #3757a7;
 }
+article.vortrag .badge.date {
+  background: #3757a7;
+}
 article.blog-post h5 {
   color: #66be5e;
 }
@@ -256,6 +263,9 @@ article.blog-post h1.title:before {
   display: block;
   height: 1.5em;
   width: 0.25em;
+  background: #66be5e;
+}
+article.blog-post .badge.date {
   background: #66be5e;
 }
 .panel.citation .panel-body {
